@@ -8,11 +8,13 @@ import {
   Users,
 } from "lucide-react";
 import Button from "../Button";
+import { FaAndroid, FaGithub, FaWindows } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
 
 export default function Feature() {
   const feature = [
     {
-      img: "../../../public/card_img.png",
+      img: "../../public/card_img.png",
       title: "Secure",
       discription:
         "Decred employs an inovative hybird Proof-of-Work/Proof-of-Stake system that",
@@ -33,6 +35,30 @@ export default function Feature() {
       more: "Read More About Sustainable ",
     },
   ];
+
+  //
+  const icons = [
+    {
+      logo: <FaWindows />,
+      title: "Windows",
+      get: "Download Now",
+    },
+    {
+      logo: <FaApple />,
+      title: "Ios",
+      get: "Download Now",
+    },
+    {
+      logo: <FaAndroid />,
+      title: "Android",
+      get: "Download Now",
+    },
+    {
+      logo: <FaGithub />,
+      title: "Source",
+      get: "Download Now",
+    },
+  ];
   return (
     <>
       <section className=" container m-auto text-center  items-center justify-center space-x-5 text-gray-300 my-30">
@@ -50,6 +76,7 @@ export default function Feature() {
           </p>
         </div>
         {/* Card */}
+        
         <div className="grid grid-cols-3 space-x-8 my-10">
           {feature.map((item, key) => (
             <div
@@ -123,7 +150,6 @@ export default function Feature() {
           <Button title="Download Now" />
         </div>
       </section>
-
       {/* Section 3 */}
       <section className="text-gray-300">
         <div className=" space-y-3 py-10">
@@ -184,12 +210,53 @@ export default function Feature() {
         </div>
       </section>
       {/* Section 3 */}
-      <section className="">
-        <div className="">
-          <h2><span>Ready To</span> Get Started</h2>
-          <p></p>
+      <section className="justify-center items-center text-center m-auto text-gray-300 py-30 ">
+        <div className="space-y-5 md:w-lg items-center text-center m-auto">
+          <h2 className="text-4xl font-bold">
+            <span className="text-teal-500">Ready To</span> Get Started
+          </h2>
+          <p className="text-sm text-gray-400">
+            Download wallte Fro YOu Operating system all Of Out Software is Open
+            Source And The Coad Can Be Viewed in Our Github
+          </p>
+        </div>
+
+        {/* <div className="grid grid-cols-1 md:grid-cols-4 justify-center m-auto gap-10 py-10 items-center text-center">
+          {icons.map((icon, idkey) => (
+            <div
+              key={idkey}
+              className="items-center justify-center text-center m-auto grid grid-cols-1 p-10 space-y-3"
+            >
+              <div className="text-center p-3 border justify-center rounded-full w-fit text-lg bg-gray-500 ">
+                {icon.logo}
+              </div>
+              <div className="text-sm">
+                <h3 className="font-bold ">{icon.title}</h3>
+                <a href="#" className=" text-teal-500">
+                  {icon.get}
+                </a>
+              </div>
+            </div>
+          ))}
+        </div> */}
+
+        <div className="grid grid-cols-4 p-5 ">
+          {icons.map((icon, idkey) => (
+            <div key={idkey} className="p-10 justify-center space-y-3">
+              <div className="inline-block border border-teal-500 text-teal-300 rounded-full p-4 text-lg">
+                {icon.logo}
+              </div>
+              <div className="">
+                <h3 className="font-bold ">{icon.title}</h3>
+                <a href="#" className=" text-sm text-teal-500">
+                  {icon.get}
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
+
     </>
   );
 }

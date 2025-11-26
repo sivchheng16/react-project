@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
-import logo from "../../../public/decred.png";
 import Button from "../Button";
+import Logo from "../Logo";
 export default function Header() {
   return (
-    <div className="w-full m-auto justify-center items-center  bg-teal-500/2 ">
+    <div className="w-full m-auto justify-center items-center  bg-teal-500/2 fixed z-100 backdrop-blur-lg">
       <div className="bg-transparent max-w-[1080px] m-auto">
-        <div className="container m-auto flex justify-between space-x-30 items-center backdrop-blur-lg">
-          <div className="flex space-x-2 text-gray-300 text-sm items-center ">
-            <img src={logo} alt="logo " className="size-6 " />
-            <p>deCREAD</p>
-          </div>
+        <div className="container m-auto flex justify-between space-x-30 items-center ">
+          <Logo />
           <nav className="space-x-10 text-md text-gray-300">
             <Link
               to="/"

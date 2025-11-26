@@ -3,7 +3,12 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      color: {
+      colors: {
+        gradientBackgroud:
+          "bg-[radial-gradient(ellipse_at_top_right,#1AE6CE,#02302e,#02302e)]",
+        customDarkTeal: "#005F56",
+        customLightTeal: "#00B3A6",
+
         primary: "#00040f",
         secondary: "#00f6ff",
         dimWhite: "rgba(225, 255, 255 ,0.7)",

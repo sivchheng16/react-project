@@ -4,7 +4,7 @@ import img1 from "../../../public/brand-blockchain.png";
 export default function Hero() {
   return (
     <>
-      <section className=" container m-auto grid grid-cols-2 items-center justify-center space-x-5 text-gray-300 my-20">
+      <section className=" container m-auto grid grid-cols-2 items-center justify-center space-x-5 text-gray-300 pt-30 ">
         <div className="space-y-4">
           <div className="leading-7">
             <h1 className="text-5xl items-center leading-13">
