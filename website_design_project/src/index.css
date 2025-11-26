@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+.link a {
+  @apply hover:text-teal-500 transition-all delay-150;
+}
+.navLink {
+  @apply hover:text-teal-500 transition-all delay-150;
+}
+
 /* 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

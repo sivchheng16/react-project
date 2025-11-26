@@ -7,17 +7,25 @@ export default function Header() {
       <div className="bg-transparent max-w-[1080px] m-auto">
         <div className="container m-auto flex justify-between space-x-30 items-center ">
           <Logo />
-          <nav className="space-x-10 text-md text-gray-300">
+          <nav className="space-x-10 text-md text-gray-300 nav">
             <Link
               to="/"
-              className="h-full text-center leading-15 text-teal-300"
+              className="h-full text-center leading-15 text-teal-300 navLink"
             >
               Home
             </Link>
-            <Link to="/decred">Decred</Link>
-            <Link to="/insights">Insights</Link>
-            <Link to="/resources">Resources</Link>
-            <Link to="/press">Press</Link>
+            <Link to="/decred" className="navLink">
+              Decred
+            </Link>
+            <Link to="/insights" className="navLink">
+              Insights
+            </Link>
+            <Link to="/resources" className="navLink">
+              Resources
+            </Link>
+            <Link to="/press" className="navLink">
+              Press
+            </Link>
           </nav>
           <div>
             <a href="#" target="_blank">

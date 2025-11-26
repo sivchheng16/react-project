@@ -86,9 +86,9 @@ export default function Footer() {
       </div>
       <div>
         {product.map(() => (
-          <div className="space-y-3">
-            <h3 className="text-">Product</h3>
-            <div className="grid grid-cols-1 space-y-2">
+          <div className="space-y-3 ">
+            <h3 className="font-bold text-gray-300">Product</h3>
+            <div className="grid grid-cols-1 space-y-2 link">
               <a href="#">{product[0].brand}</a>
               <a href="#">{product[0].press}</a>
               <a href="#">{product[0].business}</a>
@@ -99,9 +99,9 @@ export default function Footer() {
       </div>
       <div>
         {resoursces.map(() => (
-          <div className="space-y-3">
-            <h3 className="text-">Resources</h3>
-            <div className="grid grid-cols-1 space-y-2">
+          <div className="space-y-3 ">
+            <h3 className="font-bold text-gray-300">Resources</h3>
+            <div className="grid grid-cols-1 space-y-2 link">
               <a href="#">{resoursces[0].brand}</a>
               <a href="#">{resoursces[0].press}</a>
               <a href="#">{resoursces[0].business}</a>
@@ -116,9 +116,9 @@ export default function Footer() {
       </div>
       <div>
         {decred.map(() => (
-          <div className="space-y-3">
-            <h3 className="text-">Decred</h3>
-            <div className="grid grid-cols-1 space-y-2">
+          <div className="space-y-3 ">
+            <h3 className="font-bold text-gray-300">Decred</h3>
+            <div className="grid grid-cols-1 space-y-2 link">
               <a href="#">{decred[0].secure}</a>
               <a href="#">{decred[0].adaptable}</a>
               <a href="#">{decred[0].sustainable}</a>
