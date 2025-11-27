@@ -209,17 +209,15 @@ const LastNewSection = () => {
 // Download icon component
 const DownloadIcon = ({ logo, title, get }: any) => {
   return (
-    <div className="grid grid-cols-4 p-5 ">
-      <div className="p-10 justify-center space-y-3">
-        <div className="inline-block border border-teal-500 text-teal-300 rounded-full p-4 text-lg">
-          {logo}
-        </div>
-        <div>
-          <h3 className="font-bold ">{title}</h3>
-          <a href="#" className=" text-sm text-teal-500">
-            {get}
-          </a>
-        </div>
+    <div className="p-10 justify-center space-y-3">
+      <div className="inline-block border border-teal-500 text-teal-300 rounded-full p-4 text-lg">
+        {logo}
+      </div>
+      <div>
+        <h3 className="font-bold ">{title}</h3>
+        <a href="#" className=" text-sm text-teal-500">
+          {get}
+        </a>
       </div>
     </div>
   );
@@ -238,114 +236,101 @@ const GetStart = () => {
           Source And The Coad Can Be Viewed in Our Github
         </p>
       </div>
-      <DownloadIcon
-        logo={<Download />}
-        title="Download for Windows"
-        get="Get Windows Version"
-      />
-      <DownloadIcon
-        logo={<Download />}
-        title="Download for MacOS"
-        get="Get MacOS Version"
-      />
-      <DownloadIcon
-        logo={<Download />}
-        title="Download for Linux"
-        get="Get Linux Version"
-      />
+      <div className="grid grid-cols-4 p-5 ">
+        <DownloadIcon
+          logo={<Download />}
+          title="Download for Windows"
+          get="Get Windows Version"
+        />
+        <DownloadIcon
+          logo={<Download />}
+          title="Download for MacOS"
+          get="Get MacOS Version"
+        />
+        <DownloadIcon
+          logo={<Download />}
+          title="Download for Linux"
+          get="Get Linux Version"
+        />
+        <DownloadIcon
+          logo={<Download />}
+          title="Download for Linux"
+          get="Get Linux Version"
+        />
+      </div>
+    </section>
+  );
+};
+
+// Footer link component
+const FooterLink = ({ title, links }: any) => {
+  return (
+    <div className="space-y-3 ">
+      <h3 className="font-bold text-gray-300">{title}</h3>
+      <div className="grid grid-cols-1 space-y-2 link">
+        {Object.values(links).map((link: any, index: any) => (
+          <a key={index} href="#">
+            {link}
+          </a>
+        ))}
+
+        <a href="#">{decred[0].secure}</a>
+        <a href="#">{decred[0].adaptable}</a>
+        <a href="#">{decred[0].sustainable}</a>
+        <a href="#">{decred[0].history}</a>
+      </div>
+    </div>
+  );
+};
+
+// Footer section component
+const FooterSection = () => {
+  return (
+    <section className="grid md:grid-cols-3 lg:grid-cols-4 md:gap-15 lg:gap-20 text-sm text-gray-400 pb-20 justify-items-center m-auto    ">
+      <div className="space-y-5">
+        <div className="space-y-2">
+          <Logo />
+          <p className="text-gray-400">
+            Decred's build-in-govermance systens enpower its community with
+            formal right
+          </p>
+        </div>
+        <div>
+          <div className="flex gap-4 text-lg  text-teal-400">
+            <a href="https://www.facebook.com/" target="_blank">
+              {socialMedia[0].facebook}
+            </a>
+            <a href="https://www.youtube.com/" target="_blank">
+              {socialMedia[0].youtube}
+            </a>
+            <a href="https://x.com/" target="_blank">
+              {socialMedia[0].twitter}
+            </a>
+            <a href="https://www.tiktok.com/en/" target="_blank">
+              {socialMedia[0].tiktok}
+            </a>
+            <a href="https://github.com/" target="_blank">
+              {socialMedia[0].github}
+            </a>
+          </div>
+        </div>
+      </div>
+      <FooterLink title="Products" links={product[0]} />
+      <FooterLink title="Resources" links={resoursces[0]} />
+      <FooterLink title="Decred" links={decred[0]} />
     </section>
   );
 };
 export default function Home() {
   return (
-    <div className=" ">
+    <div>
       <div className="max-w-[1700px] justify-center items-center m-auto ">
-        {/* Hero Section */}
         <HeroSection />
-        {/* Feature Section */}
         <FeatureSection />
-        {/* Section 2 */}
         <FeatureRelease />
-        {/* Section 3 */}
-
         <LastNewSection />
         <GetStart />
-        {/* Footer Section */}
-        <>
-          <section className="grid md:grid-cols-3 lg:grid-cols-4 md:gap-15 lg:gap-20 text-sm text-gray-400 pb-20 justify-center m-auto  ">
-            <div className="space-y-5">
-              <div className="space-y-2">
-                <Logo />
-                <p className="text-gray-400">
-                  Decred's build-in-govermance systens enpower its community
-                  with formal right
-                </p>
-              </div>
-              <div>
-                {socialMedia.map(() => (
-                  <div className="flex gap-4 text-lg  text-teal-400">
-                    <a href="https://www.facebook.com/" target="_blank">
-                      {socialMedia[0].facebook}
-                    </a>
-                    <a href="https://www.youtube.com/" target="_blank">
-                      {socialMedia[0].youtube}
-                    </a>
-                    <a href="https://x.com/" target="_blank">
-                      {socialMedia[0].twitter}
-                    </a>
-                    <a href="https://www.tiktok.com/en/" target="_blank">
-                      {socialMedia[0].tiktok}
-                    </a>
-                    <a href="https://github.com/" target="_blank">
-                      {socialMedia[0].github}
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div>
-              {product.map(() => (
-                <div className="space-y-3 ">
-                  <h3 className="font-bold text-gray-300">Product</h3>
-                  <div className="grid grid-cols-1 space-y-2 link">
-                    <a href="#">{product[0].brand}</a>
-                    <a href="#">{product[0].press}</a>
-                    <a href="#">{product[0].business}</a>
-                    <a href="#">{product[0].contributor}</a>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div>
-              {resoursces.map(() => (
-                <div className="space-y-3 ">
-                  <h3 className="font-bold text-gray-300">Resources</h3>
-                  <div className="grid grid-cols-1 space-y-2 link">
-                    <a href="#">{resoursces[0].brand}</a>
-                    <a href="#">{resoursces[0].press}</a>
-                    <a href="#">{resoursces[0].business}</a>
-                    <a href="#">{resoursces[0].contributor}</a>
-                    <a href="#">{resoursces[0].tech}</a>
-                    <a href="#">{resoursces[0].apt}</a>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div>
-              {decred.map(() => (
-                <div className="space-y-3 ">
-                  <h3 className="font-bold text-gray-300">Decred</h3>
-                  <div className="grid grid-cols-1 space-y-2 link">
-                    <a href="#">{decred[0].secure}</a>
-                    <a href="#">{decred[0].adaptable}</a>
-                    <a href="#">{decred[0].sustainable}</a>
-                    <a href="#">{decred[0].history}</a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        </>
+        <FooterSection />
       </div>
     </div>
   );
