@@ -8,8 +8,7 @@ import {
   Users,
 } from "lucide-react";
 import Button from "../../Button";
-import { FaAndroid, FaGithub, FaWindows } from "react-icons/fa";
-import { FaApple } from "react-icons/fa";
+import { FaAndroid, FaGithub, FaWindows,FaApple } from "react-icons/fa";
 
 export default function Feature() {
   const feature = [

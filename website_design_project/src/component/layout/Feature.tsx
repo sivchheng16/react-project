@@ -22,7 +22,7 @@ export default function Feature() {
     },
     {
       img: "../../../public/card_img.png",
-      title: "Adaptable",
+    title: "Adaptable",
       discription:
         "Decred continuously unds its treasury with 10% of each block reward and employs",
       more: "Read More About Adatable",

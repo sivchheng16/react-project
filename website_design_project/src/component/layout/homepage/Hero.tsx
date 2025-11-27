@@ -9,11 +9,12 @@ export default function Hero() {
           <div className="leading-7">
             <h1 className="text-5xl items-center leading-13">
               <span className="text-7xl font-bold "> Community </span>
-             <br /> Directed 
-              Superior Store of <span className="text-teal-500">Value</span>
+              <br /> Directed Superior Store of{" "}
+              <span className="text-teal-500">Value</span>
             </h1>
             <p className="leading-7 text-gray-300">
-              Decred employs an innovative hybrid Proof-<br></br>
+              Decred employs an innovative hybrid Proof-
+              <br />
               of-Work/Proof-of-Stake system.
             </p>
           </div>
