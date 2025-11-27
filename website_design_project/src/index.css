@@ -6,8 +6,11 @@
 .navLink {
   @apply hover:text-teal-500 transition-all delay-150;
 }
+body{
+  @apply bg-teal-950 h-lh;
+}
 
-/* 
+/*  bg-gray-800 text-white
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

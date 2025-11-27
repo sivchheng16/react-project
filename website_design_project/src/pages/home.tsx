@@ -9,16 +9,9 @@ export default function Home() {
   return (
     <>
       <div className="w-full justify-center">
-        <div className="max-w-[1080px] justify-center items-center m-auto ">
-          {/* Hero section */}
+        <div className="max-w-[1700px] justify-center items-center m-auto ">
           <Hero />
-          {/* <div className="absolute inset-0 opacity-25 bg-[radial-gradient(ellipse_at_top_left,#1AE6CE,#02302e,#02302e)]"></div> */}
-
-          {/* End Hero section */}
-          {/* Feature Section */}
           <Feature />
-          {/* End Feature Section */}
-          {/* Footer */}
           <Footer />
         </div>
       </div>

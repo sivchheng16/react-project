@@ -8,13 +8,6 @@ import {
 import Logo from "../Logo";
 
 export default function Footer() {
-  const footer = [
-    {
-      logo: <Logo />,
-      title:
-        "Decred's build-in-govermance systens enpower its community with formal right",
-    },
-  ];
   const product = [
     {
       brand: "Brand Resourses",
@@ -53,7 +46,7 @@ export default function Footer() {
     },
   ];
   return (
-    <section className="grid grid-cols-4 gap-20 text-sm text-gray-400">
+    <section className="grid grid-cols-4 gap-20 text-sm text-gray-400 pb-20">
       <div className="space-y-5">
         <div className="space-y-2">
           <Logo />
@@ -108,8 +101,6 @@ export default function Footer() {
               <a href="#">{resoursces[0].contributor}</a>
               <a href="#">{resoursces[0].tech}</a>
               <a href="#">{resoursces[0].apt}</a>
-              <a href="#">{resoursces[0].support}</a>
-              <a href="#">{resoursces[0].bug}</a>
             </div>
           </div>
         ))}
