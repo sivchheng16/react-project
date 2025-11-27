@@ -1,6 +1,6 @@
 import { Play } from "lucide-react";
 import Button from "../Button";
-import img1 from "../../../public/brand-blockchain.png";
+import img1 from "../../../public/img/brand-blockchain.png";
 export default function Hero() {
   return (
     <>
@@ -8,7 +8,10 @@ export default function Hero() {
         <div className="space-y-4">
           <div className="leading-7">
             <h1 className="text-5xl items-center leading-13">
-              <span className=" text-5xl md;text-6xl lg:text-7xl font-bold "> Community </span>
+              <span className=" text-5xl md;text-6xl lg:text-7xl font-bold ">
+                {" "}
+                Community{" "}
+              </span>
               Directed Superior Store of{" "}
               <span className="text-teal-500">Value</span>
             </h1>
@@ -38,4 +41,3 @@ export default function Hero() {
     </>
   );
 }
-https://ubuntuhandbook.org/wp-content/uploads/2024/03/apt-veyon-deb.webp

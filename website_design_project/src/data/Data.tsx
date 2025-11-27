@@ -8,21 +8,21 @@ import {
 } from "react-icons/fa";
 export const feature = [
   {
-    img: "../../public/card_img.png",
+    img: "../../public/img/card_img.png",
     title: "Secure",
     discription:
       "Decred employs an inovative hybird Proof-of-Work/Proof-of-Stake system that",
     more: "Read More About Security",
   },
   {
-    img: "../../../public/card_img.png",
+    img: "../../../public/img/card_img.png",
     title: "Adaptable",
     discription:
       "Decred continuously unds its treasury with 10% of each block reward and employs",
     more: "Read More About Adatable",
   },
   {
-    img: "../../../public/card_img.png",
+    img: "../../../public/img/card_img.png",
     title: "Sustainable",
     discription:
       "Decred employs an innovative hybrid Proof-of-Work/Proof-of-Stake system that layers",

@@ -1,4 +1,4 @@
-import lockCloud from "/lock-cloid.jpg";
+import lockCloud from "../../../public/img/lock-cloid.jpg";
 
 import {
   ArrowRight,
@@ -8,57 +8,9 @@ import {
   Users,
 } from "lucide-react";
 import Button from "../Button";
-import { FaAndroid, FaGithub, FaWindows } from "react-icons/fa";
-import { FaApple } from "react-icons/fa";
 
+import { feature, icons } from "../../data/Data";
 export default function Feature() {
-  const feature = [
-    {
-      img: "../../public/card_img.png",
-      title: "Secure",
-      discription:
-        "Decred employs an inovative hybird Proof-of-Work/Proof-of-Stake system that",
-      more: "Read More About Security",
-    },
-    {
-      img: "../../../public/card_img.png",
-      title: "Adaptable",
-      discription:
-        "Decred continuously unds its treasury with 10% of each block reward and employs",
-      more: "Read More About Adatable",
-    },
-    {
-      img: "../../../public/card_img.png",
-      title: "Sustainable",
-      discription:
-        "Decred employs an innovative hybrid Proof-of-Work/Proof-of-Stake system that layers",
-      more: "Read More About Sustainable ",
-    },
-  ];
-
-  //
-  const icons = [
-    {
-      logo: <FaWindows />,
-      title: "Windows",
-      get: "Download Now",
-    },
-    {
-      logo: <FaApple />,
-      title: "Ios",
-      get: "Download Now",
-    },
-    {
-      logo: <FaAndroid />,
-      title: "Android",
-      get: "Download Now",
-    },
-    {
-      logo: <FaGithub />,
-      title: "Source",
-      get: "Download Now",
-    },
-  ];
   return (
     <>
       <section className=" container m-auto px-4 md:px-6 lg:px-8 text-center  items-center justify-center gap-4 md:gap-8 text-gray-300 my-12 md:my-20 lg:my-30">
@@ -77,39 +29,37 @@ export default function Feature() {
         </div>
         {/* Card */}
 
-<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8 my-10">
-=======
-        <div className="grid grid-cols-3 space-x-8 my-10">
->>>>>>> 1941297 (update-from-ubunto)
-          {feature.map((item, key) => (
-            <div
-              key={key}
-              className="justify-center item-center border rounded-2xl border-teal-800/70 bg-teal-900/10 backdrop-blur-2xl pb-7 "
-            >
-              <div className="px-7">
-                <img src={item.img} alt="image" className="" />
+          <div className="grid grid-cols-3 space-x-8 my-10">
+            {feature.map((item, key) => (
+              <div
+                key={key}
+                className="justify-center item-center border rounded-2xl border-teal-800/70 bg-teal-900/10 backdrop-blur-2xl pb-7 "
+              >
+                <div className="px-7">
+                  <img src={item.img} alt="image" className="" />
 
-                <div>
                   <div>
-                    <h3 className="text-2xl font-bold py-2">{item.title}</h3>
-                    <p className="text-gray-400 py-2 text-sm">
-                      {item.discription}
-                    </p>
-                  </div>
-                  <div className="text-teal-500 items-center text-sm py-2">
-                    <a
-                      href="#"
-                      target="_blank"
-                      className="flex justify-center font-bold items-center"
-                    >
-                      {item.more} <ArrowRight className="size-4" />
-                    </a>
+                    <div>
+                      <h3 className="text-2xl font-bold py-2">{item.title}</h3>
+                      <p className="text-gray-400 py-2 text-sm">
+                        {item.discription}
+                      </p>
+                    </div>
+                    <div className="text-teal-500 items-center text-sm py-2">
+                      <a
+                        href="#"
+                        target="_blank"
+                        className="flex justify-center font-bold items-center"
+                      >
+                        {item.more} <ArrowRight className="size-4" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
