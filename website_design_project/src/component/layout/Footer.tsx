@@ -46,7 +46,7 @@ export default function Footer() {
     },
   ];
   return (
-    <section className="grid grid-cols-4 gap-20 text-sm text-gray-400 pb-20">
+    <section className="hidden md:block grid grid-cols-4 gap-20 text-sm text-gray-400 pb-20 justify-items-center container  m-auto">
       <div className="space-y-5">
         <div className="space-y-2">
           <Logo />

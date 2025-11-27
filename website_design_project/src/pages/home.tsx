@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import lockCloud from "../../../public/lock-cloid.jpg";
 
 import {
@@ -13,11 +14,21 @@ import img1 from "../../../public/brand-blockchain.png";
 import { feature, icons } from "../data/Data";
 import { product, resoursces, decred, socialMedia } from "../data/Data";
 import Logo from "../component/Logo";
+=======
+// import { Play } from "lucide-react";
+// import img1 from "../../public/brand-blockchain.png";
+// import Button from "../component/Button";
+import Feature from "../component/layout/Feature";
+import Footer from "../component/layout/Footer";
+import Hero from "../component/layout/Hero";
+import MadeAndSupport from "../component/layout/MadeAndSupport";
+>>>>>>> 103b085 (update-from-koompi)
 
 export default function Home() {
   return (
     <>
       <div className="w-full justify-center">
+<<<<<<< HEAD
         <div className="max-w-[1700px] justify-center items-center m-auto ">
           {/* Hero Section */}
 
@@ -309,6 +320,13 @@ export default function Home() {
               ))}
             </div>
           </section>
+=======
+        <div className=" justify-center items-center m-auto ">
+          <Hero />
+          <Feature />
+          <Footer />
+          <MadeAndSupport/>
+>>>>>>> 103b085 (update-from-koompi)
         </div>
       </div>
     </>

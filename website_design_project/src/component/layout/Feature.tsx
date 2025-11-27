@@ -1,4 +1,4 @@
-import lockCloud from "../../../public/lock-cloid.jpg";
+import lockCloud from "/lock-cloid.jpg";
 
 import {
   ArrowRight,
@@ -61,12 +61,12 @@ export default function Feature() {
   ];
   return (
     <>
-      <section className=" container m-auto text-center  items-center justify-center space-x-5 text-gray-300 my-30">
+      <section className=" container m-auto px-4 md:px-6 lg:px-8 text-center  items-center justify-center gap-4 md:gap-8 text-gray-300 my-12 md:my-20 lg:my-30">
         {/* Main title */}
         <div className="space-y-3">
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
             <span className="text-teal-500">Decred's</span> build-in governance{" "}
-            <br></br> systemsem power its{" "}
+            <br className="hidden md:block" /> systemsem power its{" "}
             <span className="text-teal-500">community</span>
           </h2>
           <p>
@@ -76,8 +76,8 @@ export default function Feature() {
           </p>
         </div>
         {/* Card */}
-        
-        <div className="grid grid-cols-3 space-x-8 my-10">
+
+        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8 my-10">
           {feature.map((item, key) => (
             <div
               key={key}
@@ -110,34 +110,34 @@ export default function Feature() {
       </section>
 
       {/* Section 2 */}
-      <section className="container m-auto text-center  items-center justify-center  my-30 grid grid-cols-2">
-        <div className="text-teal-500 space-y-5 pr-20 border-r-5 border-teal-700">
-          <div className="flex items-center border border-teal-900/80 p-4 rounded-2xl backdrop-blur-lg bg-transparent">
-            <div className="flex items-center text-lg font-bold">
+      <section className="container m-auto text-center  items-center justify-center   grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 my-30">
+        <div className="text-teal-500 space-y-5 px-4 md:px-20 border-r-2 md:border-r-4 border-teal-700">
+          <div className="flex items-center justify-between border border-teal-900/80 p-4 rounded-2xl backdrop-blur-lg bg-transparent">
+            <div className="flex items-center gap-2  text-lg font-bold">
               Exchanges <ArrowRight className="size-4" />
             </div>
-            <BadgeDollarSignIcon className="right-5 absolute size-9" />
+            <BadgeDollarSignIcon className="size-9" />
           </div>
-          <div className="flex items-center border border-teal-900/80 p-4 rounded-2xl backdrop-blur-lg  bg-transparent">
-            <div className="flex items-center text-lg font-bold">
+          <div className="flex items-center justify-between border border-teal-900/80 p-4 rounded-2xl backdrop-blur-lg  bg-transparent">
+            <div className="flex items-center gap-2 text-lg font-bold">
               Community <ArrowRight className="size-4" />
             </div>
-            <Users className="right-5 absolute size-9" />
+            <Users className=" size-9" />
           </div>
-          <div className="flex items-center border border-teal-900/80 p-4 rounded-2xl backdrop-blur-lg  bg-transparent">
-            <div className="flex items-center text-lg font-bold">
+          <div className="flex items-center justify-between border border-teal-900/80 p-4 rounded-2xl backdrop-blur-lg  bg-transparent">
+            <div className="flex items-center gap-2 text-lg font-bold">
               Docs <ArrowRight className="size-4" />
             </div>
-            <FileText className="right-5 absolute size-9" />
+            <FileText className=" size-9" />
           </div>
-          <div className="flex items-center border border-teal-900/80 p-4 rounded-2xl backdrop-blur-lg  bg-transparent">
-            <div className="flex items-center text-lg font-bold ">
+          <div className="flex items-center justify-between gap-2 border border-teal-900/80 p-4 rounded-2xl backdrop-blur-lg  bg-transparent">
+            <div className="flex items-center gap2 text-lg font-bold ">
               Download <ArrowRight className="size-4" />
             </div>
-            <Download className="right-5 absolute size-9" />
+            <Download className=" size-9" />
           </div>
         </div>
-        <div className="text-start  pl-20 space-y-4">
+        <div className="text-start  px-4 md:px-20 space-y-4">
           <div className="text-gray-300 space-y-4">
             <h2 className="text-4xl font-bold">
               <span className="text-teal-500">New release </span>available
@@ -152,7 +152,7 @@ export default function Feature() {
       </section>
       {/* Section 3 */}
       <section className="text-gray-300">
-        <div className=" space-y-3 py-10">
+        <div className=" space-y-3 py-10 justify-items-center">
           <h3 className="text-4xl font-bold">
             <span className="text-teal-500">Latest News</span> and Posts
           </h3>
@@ -162,8 +162,8 @@ export default function Feature() {
           </p>
         </div>
         {/*  */}
-        <div className="  grid grid-cols-1 md:grid-cols-3   space-x-5 items-center m-auto">
-          <div className="flex items-baseline-last space-x-10">
+        <div className="grid grid-cols-1 md:grid-cols-3   gap-4 md:gap-8 items-center m-auto justify-items-center">
+          <div className="flex items-baseline-last gap-8 md:gap-16">
             <div className=" space-y-2 ">
               <a
                 href="# "
@@ -221,26 +221,7 @@ export default function Feature() {
           </p>
         </div>
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-4 justify-center m-auto gap-10 py-10 items-center text-center">
-          {icons.map((icon, idkey) => (
-            <div
-              key={idkey}
-              className="items-center justify-center text-center m-auto grid grid-cols-1 p-10 space-y-3"
-            >
-              <div className="text-center p-3 border justify-center rounded-full w-fit text-lg bg-gray-500 ">
-                {icon.logo}
-              </div>
-              <div className="text-sm">
-                <h3 className="font-bold ">{icon.title}</h3>
-                <a href="#" className=" text-teal-500">
-                  {icon.get}
-                </a>
-              </div>
-            </div>
-          ))}
-        </div> */}
-
-        <div className="grid grid-cols-4 p-5 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 p-5 ">
           {icons.map((icon, idkey) => (
             <div key={idkey} className="p-10 justify-center space-y-3">
               <div className="inline-block border border-teal-500 text-teal-300 rounded-full p-4 text-lg">
@@ -256,7 +237,6 @@ export default function Feature() {
           ))}
         </div>
       </section>
-
     </>
   );
 }
