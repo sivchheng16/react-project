@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import lockCloud from "../../../public/lock-cloid.jpg";
+=======
+import lockCloud from "../../public/img/lock-cloid.jpg";
+>>>>>>> 1941297 (update-from-ubunto)
 
 import {
   ArrowRight,
@@ -10,7 +14,7 @@ import {
   Users,
 } from "lucide-react";
 import Button from "../component/Button";
-import img1 from "../../../public/brand-blockchain.png";
+import img1 from "../../public/img/brand-blockchain.png";
 import { feature, icons } from "../data/Data";
 import { product, resoursces, decred, socialMedia } from "../data/Data";
 import Logo from "../component/Logo";

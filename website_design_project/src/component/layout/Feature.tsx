@@ -22,7 +22,7 @@ export default function Feature() {
     },
     {
       img: "../../../public/card_img.png",
-    title: "Adaptable",
+      title: "Adaptable",
       discription:
         "Decred continuously unds its treasury with 10% of each block reward and employs",
       more: "Read More About Adatable",
@@ -77,7 +77,11 @@ export default function Feature() {
         </div>
         {/* Card */}
 
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8 my-10">
+=======
+        <div className="grid grid-cols-3 space-x-8 my-10">
+>>>>>>> 1941297 (update-from-ubunto)
           {feature.map((item, key) => (
             <div
               key={key}

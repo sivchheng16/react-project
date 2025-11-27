@@ -1,4 +1,4 @@
-import logo from "../../public/decred.png";
+import logo from "../../public/img/decred.png";
 
 export default function Logo() {
   return (
