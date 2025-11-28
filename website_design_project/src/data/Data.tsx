@@ -92,3 +92,23 @@ export const socialMedia = [
     github: <FaGithub />,
   },
 ];
+
+// // About page data
+
+export const featureData = [
+  {
+    img: "../../public/img/hero_background.jpg",
+    title: "Connecting Between",
+    desctiption: "Humen and Technology",
+  },
+  {
+    img: "../../public/img/im3.jpg",
+    title: "Communicating With",
+    desctiption: "Our Team and Other Company",
+  },
+  {
+    img: "../../public/img/img2.jpg",
+    title: "Work On Project ",
+    desctiption: "Starting Your Project From Beginner",
+  },
+];
