@@ -7,10 +7,16 @@ import {
   Play,
   Users,
 } from "lucide-react";
+import {
+  feature,
+  icons,
+  product,
+  resoursces,
+  decred,
+  socialMedia,
+} from "../data/Data";
 import Button from "../component/Button";
 import img1 from "../../public/img/brand-blockchain.png";
-import { feature, icons } from "../data/Data";
-import { product, resoursces, decred, socialMedia } from "../data/Data";
 import Logo from "../component/Logo";
 
 const HeroSection = () => {
@@ -117,7 +123,7 @@ const QuickLinkItem = ({ title, icon: Icon }: any) => {
 // Feature release component
 const FeatureRelease = () => {
   return (
-    <section className="container m-auto text-center  items-center justify-center  my-30 grid grid-cols-2">
+    <section className="container m-auto text-center  items-center  my-30 grid grid-cols-2 justify-center ">
       <div className="text-teal-500 space-y-5 pr-20 border-r-5 border-teal-700">
         <QuickLinkItem title="Exchanges" icon={BadgeDollarSignIcon} />
         <QuickLinkItem title="Community" icon={Users} />
@@ -153,7 +159,7 @@ const NewData = ({ date, author }: any) => {
 // Last news section component
 const LastNewSection = () => {
   return (
-    <section className="text-gray-300">
+    <section className="text-gray-300 justify-center items-center flex flex-col ">
       <div className=" space-y-3 py-10">
         <h3 className="text-4xl font-bold">
           <span className="text-teal-500">Latest News</span> and Posts
@@ -164,12 +170,13 @@ const LastNewSection = () => {
         </p>
       </div>
       {/*  */}
-      <div className="  grid grid-cols-1 md:grid-cols-3   space-x-5 items-center m-auto">
-        <div className="flex items-baseline-last space-x-10">
+      <div className="grid grid-cols-1 md:grid-cols-3   gap-10 items-center justify-items-center w-full  px-4 m-auto">
+        <div className="flex items-baseline-last gap-10">
           <div className=" space-y-2 ">
             <a
               href="# "
-              target="_blank"
+              target="_blank "
+              rel="noopener noreferrer"
               className="text-teal-500 flex items-center "
             >
               Explore Our Blog
@@ -186,7 +193,12 @@ const LastNewSection = () => {
           <p className=" text-gray-400">
             {" "}
             Need tEchnical Support? Please visit Out{" "}
-            <a href="#" target="_blank" className="text-teal-400">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-400"
+            >
               Help Center
             </a>
           </p>
@@ -195,6 +207,7 @@ const LastNewSection = () => {
           <a
             href="# "
             target="_blank"
+            rel="noopener noreferrer"
             className="text-teal-500 flex items-center "
           >
             View The Lastes Companny News <ArrowRight className="size-4" />
@@ -237,26 +250,9 @@ const GetStart = () => {
         </p>
       </div>
       <div className="grid grid-cols-4 p-5 ">
-        <DownloadIcon
-          logo={<Download />}
-          title="Download for Windows"
-          get="Get Windows Version"
-        />
-        <DownloadIcon
-          logo={<Download />}
-          title="Download for MacOS"
-          get="Get MacOS Version"
-        />
-        <DownloadIcon
-          logo={<Download />}
-          title="Download for Linux"
-          get="Get Linux Version"
-        />
-        <DownloadIcon
-          logo={<Download />}
-          title="Download for Linux"
-          get="Get Linux Version"
-        />
+        {icons.map((icon) => (
+          <DownloadIcon {...icon} />
+        ))}
       </div>
     </section>
   );
@@ -273,11 +269,6 @@ const FooterLink = ({ title, links }: any) => {
             {link}
           </a>
         ))}
-
-        <a href="#">{decred[0].secure}</a>
-        <a href="#">{decred[0].adaptable}</a>
-        <a href="#">{decred[0].sustainable}</a>
-        <a href="#">{decred[0].history}</a>
       </div>
     </div>
   );
@@ -286,38 +277,60 @@ const FooterLink = ({ title, links }: any) => {
 // Footer section component
 const FooterSection = () => {
   return (
-    <section className="grid md:grid-cols-3 lg:grid-cols-4 md:gap-15 lg:gap-20 text-sm text-gray-400 pb-20 justify-items-center m-auto    ">
-      <div className="space-y-5">
-        <div className="space-y-2">
-          <Logo />
-          <p className="text-gray-400">
-            Decred's build-in-govermance systens enpower its community with
-            formal right
-          </p>
-        </div>
-        <div>
-          <div className="flex gap-4 text-lg  text-teal-400">
-            <a href="https://www.facebook.com/" target="_blank">
-              {socialMedia[0].facebook}
-            </a>
-            <a href="https://www.youtube.com/" target="_blank">
-              {socialMedia[0].youtube}
-            </a>
-            <a href="https://x.com/" target="_blank">
-              {socialMedia[0].twitter}
-            </a>
-            <a href="https://www.tiktok.com/en/" target="_blank">
-              {socialMedia[0].tiktok}
-            </a>
-            <a href="https://github.com/" target="_blank">
-              {socialMedia[0].github}
-            </a>
+    <section className=" container w-full justify-center m-auto ">
+      <div className="container grid md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-20 text-sm text-gray-400 pb-20 justify-items-center items-start m-auto px-4">
+        <div className="space-y-5  text-center md:text-left w-full">
+          <div className="space-y-2 flex flex-col items-center md:items-start">
+            <Logo />
+            <p className="text-gray-400">
+              Decred's build-in-govermance systens enpower its community with
+              formal right
+            </p>
+          </div>
+          <div className="flex justify-center md:justify-start">
+            <div className="flex gap-4 text-lg  text-teal-400">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {socialMedia[0].facebook}
+              </a>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {socialMedia[0].youtube}
+              </a>
+              <a
+                href="https://x.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {socialMedia[0].twitter}
+              </a>
+              <a
+                href="https://www.tiktok.com/en/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {socialMedia[0].tiktok}
+              </a>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {socialMedia[0].github}
+              </a>
+            </div>
           </div>
         </div>
+        <FooterLink title="Products" links={product[0]} />
+        <FooterLink title="Resources" links={resoursces[0]} />
+        <FooterLink title="Decred" links={decred[0]} />
       </div>
-      <FooterLink title="Products" links={product[0]} />
-      <FooterLink title="Resources" links={resoursces[0]} />
-      <FooterLink title="Decred" links={decred[0]} />
     </section>
   );
 };
