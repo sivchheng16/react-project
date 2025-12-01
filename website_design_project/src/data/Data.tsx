@@ -112,3 +112,26 @@ export const featureData = [
     desctiption: "Starting Your Project From Beginner",
   },
 ];
+
+export const authorProfile = [
+  {
+    img: "../../public/Author_profile/jake.jpg",
+    authorName: "jake",
+    desctiption: "technology build the hold software ",
+  },
+  {
+    img: "../../public/Author_profile/jam.jpg",
+    authorName: "jam",
+    desctiption: "Communicate with other company",
+  },
+  {
+    img: "../../public/Author_profile/jongkuk.jpg",
+    authorName: "jungkuk",
+    desctiption: "artichture for engenear",
+  },
+  {
+    img: "../../public/Author_profile/liza.jpg",
+    authorName: "laza",
+    desctiption: "accounting and tax payment",
+  },
+];
