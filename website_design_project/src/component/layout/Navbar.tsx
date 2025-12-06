@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Button from "../Button";
 import Logo from "../Logo";
 import { Menu } from "lucide-react";
@@ -9,24 +9,56 @@ export default function Header() {
         <div className="container m-auto flex justify-between gap-4 md:gap-8 lg:gap-16 items-center p-3">
           <Logo />
           <nav className="space-x-10 text-md text-gray-300 nav hidden md:block">
-            <Link
+            <NavLink
               to="/"
-              className="h-full text-center leading-15 text-teal-300 navLink"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-teal-300 navlink"
+                  : "text-gray-200 navlink hover:text-teal-200"
+              }
             >
               Home
-            </Link>
-            <Link to="/about" className="navLink">
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-teal-300 navlink"
+                  : "text-gray-200 navlink hover:text-teal-200"
+              }
+            >
               About
-            </Link>
-            <Link to="/insights" className="navLink">
+            </NavLink>
+            <NavLink
+              to="/insights"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-teal-300 navlink"
+                  : "text-gray-200 navlink hover:text-teal-200"
+              }
+            >
               Insights
-            </Link>
-            <Link to="/resources" className="navLink">
+            </NavLink>
+            <NavLink
+              to="/resources"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-teal-300 navlink"
+                  : "text-gray-200 navlink hover:text-teal-200"
+              }
+            >
               Resources
-            </Link>
-            <Link to="/press" className="navLink">
+            </NavLink>
+            <NavLink
+              to="/press"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-teal-300 navlink"
+                  : "text-gray-200 navlink hover:text-teal-200"
+              }
+            >
               Press
-            </Link>
+            </NavLink>
           </nav>
           <a href="#" target="_blank" className="hidden md:block">
             <Button title="Get Start" />
